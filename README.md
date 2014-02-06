@@ -4,7 +4,7 @@ wercker-labs-docker
 This is the packer script used to provision the docker image (an amazon AMI).
 The image is based on the default amazon ubuntu 12.04 64-bit ami
 
-Feel free to send pull request, make suggestions and such. 
+Feel free to make suggestions, send pull request and such.
 
 __Note:__ This project is meant to show how the docker image is created, not 
 like the normal wercker boxes: enable all users to create their own variants.
