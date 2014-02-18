@@ -14,19 +14,22 @@
   "provisioners": [
       {
         "inline": [
-          "sudo apt-get install linux-image-extra-virtual -y",
-          "sudo sh -c \"curl http://get.docker.io/gpg | apt-key add -\"",
-          "sudo sh -c \"echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list\"",
-          "sudo apt-get update",
-          "sudo apt-get install lxc-docker -y",
-          "sudo apt-get install libssl-dev build-essential libxslt-dev libxml2-dev -y",
-          "sudo apt-get install git bzr mercurial subversion -y",
+          "export DEBIAN_FRONTEND=noninteractive",
+          "sudo -E sh -c \"curl http://get.docker.io/gpg | apt-key add -\"",
+          "sudo -E sh -c \"echo deb https://get.docker.io/ubuntu docker main > /etc/apt/sources.list.d/docker.list\"",
+          "sudo -E apt-get update",
+          "sudo -E apt-get install linux-image-extra-virtual -y",
+          "sudo -E apt-get install linux-image-extra-`uname -r` -y",
+          "sudo -E apt-get install lxc-docker -y",
+          "sudo -E apt-get install libssl-dev build-essential libxslt-dev libxml2-dev -y",
+          "sudo -E apt-get install git bzr mercurial subversion -y",
           "git config --global user.email \"pleasemailus@wercker.com\"",
           "git config --global user.name \"wercker\"",
-          "sudo docker pull ubuntu",
-          "sudo docker pull base",
-          "sudo docker pull busybox",
-          "sudo docker pull centos"
+          "sudo -E docker pull ubuntu",
+          "sudo -E docker pull base",
+          "sudo -E docker pull busybox",
+          "sudo -E docker pull centos",
+          "sudo -E usermod -a -G docker ubuntu"
         ],
         "type": "shell"
       }
