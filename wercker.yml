@@ -1,7 +1,7 @@
 box: wercker/default
 build:
     steps:
-        - install-package:
+        - install-packages:
             packages: unzip
         - script:
             name: Install packer
