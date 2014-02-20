@@ -32,7 +32,7 @@
           "sudo -E usermod -a -G docker ubuntu",
           "wget \"https://go.googlecode.com/files/go1.2.linux-amd64.tar.gz\"",
           "sudo -E tar -C /usr/local -xzf \"go1.2.linux-amd64.tar.gz\"",
-          "rm \"go1.2.linux-amd64.tar.gz",
+          "rm \"go1.2.linux-amd64.tar.gz\"",
           "mkdir -p \"$HOME/go/\"{src,pkg,bin}",
           "echo 'export GOROOT=\"/usr/local/go\"' >> $HOME/.profile",
           "echo 'export PATH=\"$GOROOT/bin:$GOPATH/bin:$PATH\"' >> $HOME/.profile"
