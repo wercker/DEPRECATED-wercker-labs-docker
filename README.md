@@ -22,6 +22,9 @@ The MIT License (MIT)
 
 # Changelog
 
+## 0.0.7
+* Make command added
+
 ## 0.0.6
 * Go updated to 1.3
 * Docker 1.2.0

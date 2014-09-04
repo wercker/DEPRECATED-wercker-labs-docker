@@ -30,6 +30,7 @@
           "sudo -E apt-get install lxc-docker -y",
           "sudo -E apt-get install libssl-dev build-essential libxslt-dev libxml2-dev -y",
           "sudo -E apt-get install git bzr mercurial subversion -y",
+          "sudo -E apt-get install make -y",
           "git config --global user.email \"pleasemailus@wercker.com\"",
           "git config --global user.name \"wercker\"",
           "sudo wget -O /etc/init/docker.conf https://raw.github.com/dotcloud/docker/master/contrib/init/upstart/docker.conf",
